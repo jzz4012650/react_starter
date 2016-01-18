@@ -5,6 +5,7 @@ my usual react starter
 
 ```text
 $ npm install
-$ npm run watch
-$ npm run dev-server|dev-server-hot
+$ npm start
+
+open http://localhost:3000
 ```
