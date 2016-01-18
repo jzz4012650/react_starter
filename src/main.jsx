@@ -2,6 +2,7 @@ require('./main.less');
 
 import React from 'react';
 import ReactDom from 'react-dom';
+import Test from './Test.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -13,4 +14,4 @@ class App extends React.Component {
     }
 }
 
-ReactDom.render(<App/>, document.querySelector('#container'));
+ReactDom.render(<Test/>, document.querySelector('#container'));

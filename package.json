@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "watch": "webpack --config webpack.config.js --progress --profile --colors --watch",
     "dev-server": "webpack-dev-server --config webpack.config.js --progress --colors --port 8080 --inline",
-    "dev-server-hot": "webpack-dev-server --config webpack.config.js --progress --colors --port 8080 --inline --hot",
+    "dev-server-hot": "webpack-dev-server --config webpack.config.js --progress --colors --port 3000 --inline --hot",
     "build": "webpack --config webpack.config.js --progress --profile --colors --optimize-minimize"
   },
   "repository": {
@@ -21,19 +22,24 @@
   },
   "homepage": "https://github.com/jzz4012650/react_starter#readme",
   "devDependencies": {
-    "babel-core": "^6.4.0",
-    "babel-loader": "^6.2.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-2": "^6.3.13",
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
     "css-loader": "^0.23.1",
-    "export-css-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.6.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
     "less-plugin-est": "^2.0.4",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
-    "style-loader": "^0.13.0"
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
   }
 }

@@ -3,12 +3,16 @@ var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    entry: {
-        main: "./src/main.jsx"
-    },
+    devtool: 'eval',
+    entry: [
+        'webpack-dev-server/client?http://localhost:3000',
+        'webpack/hot/only-dev-server',
+        './src/main.jsx'
+    ],
     output: {
         path: __dirname + "/dist",
-        filename: "[name].js"
+        filename: "[name].js",
+        publicPath: '/dist/'
     },
     module: {
         loaders: [{
@@ -17,15 +21,13 @@ module.exports = {
                 "css?sourceMap!less?sourceMap")
         }, {
             test: /\.jsx?$/,
-            exclude: /(node_modules|bower_components)/,
-            loader: 'babel',
-            query: {
-                presets: ['react', 'es2015']
-            }
+            // exclude: /(node_modules|bower_components)/,
+            loaders: ['react-hot', 'babel'],
+            include: path.join(__dirname, 'src')
         }]
     },
-    devtool: 'source-map',
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin("[name].css")
     ]
 }
