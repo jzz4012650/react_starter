@@ -16,4 +16,4 @@ open http://localhost:3000
 $ npm install
 $ npm run build
 ```
-all dist files lies in /dist/
+all dist file lies in /dist/
